@@ -51,25 +51,25 @@ function draw() {
         // let currentTime = millis();
         // let adjustedTime = floor(currentTime);
         // console.log(counter, handDistance);
-        console.log(handDistance);
-        let dividend = floor(handDistance/limitation);
-        if (handDistance <= boundary && counter % dividend == 0) {
-            socket.emit('button', buttonPressed);
-            console.log('button pushed');
-        }
+        // console.log(handDistance);
+        // let dividend = floor(handDistance/limitation);
+        // if (handDistance <= boundary && counter % dividend == 0) {
+        //     socket.emit('button', buttonPressed);
+        //     console.log('button pushed');
+        // }
         // if (handDistance <= 100 && counter % 6 == 0) {
         //     socket.emit('button', buttonPressed);
         //     console.log('button pushed');
         // }
-        // if (handDistance <= 50 && !hasClapped) {
-        //     socket.emit('button', buttonPressed);
-        //     console.log('button pushed');
-        //     hasClapped = true;
-        // }
-        // if (handDistance >= 150 && hasClapped) {
-        //     hasClapped = false;
-        //     console.log('reset');
-        // }
+        if (handDistance <= 50 && !hasClapped) {
+            socket.emit('button', buttonPressed);
+            console.log('button pushed');
+            hasClapped = true;
+        }
+        if (handDistance >= 150 && hasClapped) {
+            hasClapped = false;
+            console.log('reset');
+        }
         // ellipse(pose.rightWrist.x, pose.rightWrist.y, 50);
         // ellipse(pose.leftWrist.x, pose.leftWrist.y, 50);
         for (i = 0; i < pose.keypoints.length; i++) {

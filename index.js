@@ -10,7 +10,8 @@ server.listen(port, () => {
 });
 
 let mqtt = require('mqtt');
-let client  = mqtt.connect('mqtt://192.168.0.14:1883');
+let client  = mqtt.connect('mqtt://70.112.183.47:1883');
+// let client  = mqtt.connect('https://b3e45e15720d.ngrok.io');
  
 client.on('connect', function () {
   client.subscribe('presence', function (err) {
