@@ -72,11 +72,11 @@ function draw() {
         }
         // ellipse(pose.rightWrist.x, pose.rightWrist.y, 50);
         // ellipse(pose.leftWrist.x, pose.leftWrist.y, 50);
-        for (i = 0; i < pose.keypoints.length; i++) {
-            let x = pose.keypoints[i].position.x;
-            let y = pose.keypoints[i].position.y;
-            ellipse(x, y, 24);
-        }
+        // for (i = 0; i < pose.keypoints.length; i++) {
+        //     let x = pose.keypoints[i].position.x;
+        //     let y = pose.keypoints[i].position.y;
+        //     ellipse(x, y, 24);
+        // }
     }
     counter++;
 }
