@@ -6,14 +6,15 @@
     <title>Clapper</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.0/addons/p5.sound.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.0/addons/p5.sound.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.15/Tone.js"></script>
 </head>
 <body id="body">
-    <button id="button">TOGGLE LIGHTS</button>
+    <button id="button">Start Audio</button>
     <div class="videoCaptureDiv" id="videoCaptureDiv">
     </div>
-    <script src="app.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script> var socket = io(); </script>
+    <script src="app.js"></script>
 </body>
 </html>
